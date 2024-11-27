@@ -32,8 +32,8 @@ const Header = () => {
       </div>
       {/* Hamburger Menu */}
       <div className="hamburger" onClick={toggleMenu}>
-      <Menu />
-      <X />
+      
+      
       </div>
     </div>
   );
