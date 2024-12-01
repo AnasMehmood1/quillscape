@@ -16,38 +16,3 @@ const builder = imageUrlBuilder(client);
 export const urlFor = (source) => builder.image(source);
 
 export default client;
-
-// Fetch all blog posts
-export async function getBlogPosts() {
-  return client.fetch(`
-    *[_type == "post"] | order(publishedAt desc) {
-      _id,
-      title,
-      slug,
-      excerpt,
-      "author": author->name,
-      "categories": categories[]->title,
-      "mainImage": mainImage.asset->url,
-      publishedAt,
-    }
-  `);
-}
-
-// Fetch a single blog post by slug
-export async function getBlogPost(slug) {
-  return client.fetch(
-    `
-    *[_type == "post" && slug.current == $slug][0] {
-      _id,
-      title,
-      slug,
-      body,
-      "author": author->name,
-      "categories": categories[]->title,
-      "mainImage": mainImage.asset->url,
-      publishedAt,
-    }
-  `,
-    { slug }
-  );
-}
