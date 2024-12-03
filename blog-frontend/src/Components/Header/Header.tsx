@@ -61,7 +61,7 @@ export default function Header() {
           </Link>
           <Button
             variant="default"
-            className="bg-gray-900 text-white hover:bg-gray-800"
+            className="bg-gray-900 text-white hover:bg-gray-800 rounded-sm"
             asChild
           >
             <Link href="/signup">

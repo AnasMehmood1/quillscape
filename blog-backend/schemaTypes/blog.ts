@@ -9,21 +9,20 @@ export default{
             name:"name",
         },
         {
-            title:"Blog thumbnail",
-            type:"image",
-            name:"thubmnail",
+            title: "Blog Thumbnail",
+            type: "image",
+            name: "thumbnail", // Correct spelling
             options: {
-                hotspot: true, 
+              hotspot: true,
+            },
+            fields: [
+              {
+                name: "alt",
+                title: "Image Alt",
+                type: "string",
               },
-              fields:[
-                {
-                    name:"alt",
-                    title:"image alt",
-                    type:"string"
-                },
-              ]
-        
-        },
+            ],
+          },
         {
             name:"content",
             title:"Blog Description",
