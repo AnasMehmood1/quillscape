@@ -18,10 +18,10 @@ const BlogCard = () => {
       "thumbnailUrl": thumbnail.asset->url,
     }`;  
     const data = await client.fetch(query);
-    setBlogData(data); // Store data in state
+    setBlogData(data); 
   };
 
-  // useEffect to fetch data on component mount
+ 
   useEffect(() => {
     fetchBlogData();
   }, []);
