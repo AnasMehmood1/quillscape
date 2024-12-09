@@ -1,12 +1,12 @@
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 
-// Initialize the Sanity client
+// Initialize the Sanity client using environment variables
 export const client = createClient({
-  projectId: "ugt3hcsc", // Replace with your project ID
-  dataset: "production", // Replace with your dataset name
-  apiVersion: "2023-01-01", // Add a specific API version
-  useCdn: true, // Use the CDN for faster responses
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION,
+  useCdn: process.env.NEXT_PUBLIC_SANITY_USE_CDN === "true",
 });
 
 // Initialize the image builder
@@ -14,5 +14,4 @@ const builder = imageUrlBuilder(client);
 
 // Function to generate image URLs
 export const urlFor = (source) => builder.image(source);
-
-
+console.log(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID);
