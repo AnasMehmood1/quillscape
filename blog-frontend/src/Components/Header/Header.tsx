@@ -33,12 +33,16 @@ export default function Header() {
             <Link href="/" className="text-sm font-medium hover:text-gray-600">
               Home
             </Link>
-            <div className="relative group">
+          <Link href="/blog">
+          <div className="relative group">
               <button className="flex items-center space-x-1 text-sm font-medium hover:text-gray-600">
-                <span>Products</span>
+                <span>Blogs</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
             </div>
+          </Link>
+
+
             <div className="relative group">
               <button className="flex items-center space-x-1 text-sm font-medium hover:text-gray-600">
                 <span>Resources</span>

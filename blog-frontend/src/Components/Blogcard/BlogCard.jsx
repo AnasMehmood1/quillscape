@@ -45,9 +45,9 @@ const BlogCard = () => {
     <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {blogs.map((blog) => (
-          // Ensure we encode the slug correctly
+          // Conditionally check if slug exists
           blog.slug?.current ? (
-            <Link href={`/blog/${encodeURIComponent(blog.slug.current)}`} key={blog._id}>
+            <Link href={`/blog/${blog.slug.current}`} key={blog._id}>
               <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full">
                 <div className="aspect-[16/10] relative">
                   {blog.thumbnail && (
@@ -107,6 +107,7 @@ const BlogCard = () => {
               </Card>
             </Link>
           ) : (
+            // Fallback for blogs without a slug
             <div key={blog._id} className="text-red-500">
               <p>Blog post without a slug</p>
             </div>

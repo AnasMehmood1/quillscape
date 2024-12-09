@@ -33,9 +33,9 @@ export default function BlogHero() {
         <div className="absolute bottom-0 p-6 md:p-8 text-white">
           <div className="space-y-2 mb-4">
             <div className="flex items-center gap-2 text-sm text-gray-200">
-              <span>Olivia Rhye</span>
+              <span>Anas Mehmood</span>
               <span>•</span>
-              <span>20 Jan 2022</span>
+              <span>12 Dec 2024</span>
             </div>
             <h2 className="text-2xl md:text-3xl font-semibold">
               <a href="#" className="hover:underline">UX review presentations</a>
