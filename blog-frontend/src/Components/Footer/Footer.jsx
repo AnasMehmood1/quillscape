@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="relative px-6 py-12 mx-auto max-w-7xl">
       
         <div className="text-center text-white mb-16">
-          <h2 className="text-4xl font-bold mb-4">Let's get started on something great</h2>
+        <h2 className="text-4xl font-bold mb-4">Let&apos;s get started on something great</h2>
           <p className="text-xl mb-6">Join over 4,000+ startups already growing with Quillscape.</p>
           <button className="px-6 py-2 rounded-full border-2 border-white text-white hover:bg-white hover:text-purple-600 transition-colors">
             Start your 7-day free trial

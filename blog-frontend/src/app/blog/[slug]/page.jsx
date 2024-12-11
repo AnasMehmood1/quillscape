@@ -7,7 +7,8 @@ import { Card, CardContent, CardHeader } from "@/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/ui/avatar"
 import { Badge } from "@/ui/badge"
 import { Skeleton } from "@/ui/skeleton"
-import { CalendarIcon, UserIcon } from 'lucide-react'
+import { CalendarIcon } from 'lucide-react'
+import Image from "next/image"
 
 const components = {
   types: {
@@ -105,7 +106,7 @@ const BlogDetailPage = ({ params }) => {
       <Card className="overflow-hidden">
         {blog.thumbnail && (
           <div className="relative h-[400px]  mb-6">
-            <img
+            <Image
               src={urlFor(blog.thumbnail).url()}
               alt={blog.name}
               className="object-cover w-full h-full"

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { PenLine } from 'lucide-react'
 import { Badge } from "@/ui/badge"
+import Link from "next/link"
 
 export default function BlogHero() {
   return (
@@ -38,7 +39,7 @@ export default function BlogHero() {
               <span>12 Dec 2024</span>
             </div>
             <h2 className="text-2xl md:text-3xl font-semibold">
-              <a href="/blog" className="hover:underline">UX review presentations</a>
+              <Link href="/blog" className="hover:underline">UX review presentations</Link>
             </h2>
             <p className="text-lg text-gray-200">
               How do you create compelling presentations that wow your colleagues and impress your managers?
