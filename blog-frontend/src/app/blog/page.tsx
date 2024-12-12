@@ -1,5 +1,5 @@
 
-import BlogCard from "@/Components/Blogcard/BlogCard"
+import BlogCard from "@/Component/Blogcard/BlogCard"
 
 
 export default function BlogPage() {

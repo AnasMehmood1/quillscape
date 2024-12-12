@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { PenLine } from 'lucide-react'
-import { Badge } from "@/ui/badge"
+import { Badge } from "@/Components/ui/badge"
 import Link from "next/link"
 
 export default function BlogHero() {

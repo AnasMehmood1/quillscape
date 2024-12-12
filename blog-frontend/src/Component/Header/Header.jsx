@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
-import { Button } from '@/ui/button'
+import { Button } from '@/Components/ui/button'
 
 export default function Header() {
   return (

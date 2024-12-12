@@ -4,9 +4,9 @@ import React, { useEffect, useState } from 'react';
 import { client, urlFor } from "@/lib/sanity";
 import Image from 'next/image';
 import Link from 'next/link';
-import { Card, CardContent } from "@/ui/card";
-import { Badge } from "@/ui/badge";
-import { Avatar, AvatarImage, AvatarFallback } from "@/ui/avatar";
+import { CardContent } from "@/Components/ui/card";
+import { Badge } from "@/Components/ui/badge";
+import { Avatar, AvatarImage, AvatarFallback } from "@/Components/ui/avatar";
 
 const BlogCard = () => {
   const [blogs, setBlogs] = useState([]);
@@ -48,7 +48,7 @@ const BlogCard = () => {
           // Conditionally check if slug exists
           blog.slug?.current ? (
             <Link href={`/blog/${blog.slug.current}`} key={blog._id}>
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full">
+              <div className="overflow-hidden bg-white hover:shadow-lg transition-shadow duration-300 h-full">
                 <div className="aspect-[16/10] relative">
                   {blog.thumbnail && (
                     <Image 
@@ -104,7 +104,7 @@ const BlogCard = () => {
                     )}
                   </div>
                 </CardContent>
-              </Card>
+              </div>
             </Link>
           ) : (
             // Fallback for blogs without a slug

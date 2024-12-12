@@ -3,10 +3,10 @@
 import React, { useEffect, useState } from "react"
 import { client, urlFor } from "@/lib/sanity"
 import { PortableText } from "@portabletext/react"
-import { Card, CardContent, CardHeader } from "@/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/ui/avatar"
-import { Badge } from "@/ui/badge"
-import { Skeleton } from "@/ui/skeleton"
+import { Card, CardContent, CardHeader } from "@/Components/ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/Components/ui/avatar"
+import { Badge } from "@/Components/ui/badge"
+import { Skeleton } from "@/Components/ui/skeleton"
 import { CalendarIcon } from 'lucide-react'
 import Image from "next/image"
 
@@ -52,7 +52,7 @@ const components = {
 }
 
 const BlogDetailPage = ({ params }) => {
-  const { slug } = params
+  const { slug } =React.use( params)
   const [blog, setBlog] = useState(null)
   const [loading, setLoading] = useState(true)
 
@@ -103,13 +103,15 @@ const BlogDetailPage = ({ params }) => {
 
   return (
     <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <Card className="overflow-hidden">
+      <div className="overflow-hidden">
         {blog.thumbnail && (
           <div className="relative h-[400px]  mb-6">
             <Image
               src={urlFor(blog.thumbnail).url()}
               alt={blog.name}
               className="object-cover w-full h-full"
+              fill
+                      priority
             />
           </div>
         )}
@@ -145,7 +147,7 @@ const BlogDetailPage = ({ params }) => {
             <PortableText value={blog.content} components={components} />
           </div>
         </CardContent>
-      </Card>
+      </div>
     </div>
   )
 }

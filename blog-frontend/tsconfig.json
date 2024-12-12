@@ -23,7 +23,7 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/Components/Blogcard/BlogCard.jsx", "src/app/blog/[slug]/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/Components/Blogcard/BlogCard.jsx", "src/app/blog/[slug]/page.jsx", "src/Components/Header/Header.jsx", "src/Components/Hero/Hero.jsx", "src/Components/Footer/Footer.jsx"],
   "exclude": ["node_modules"]
 }
 

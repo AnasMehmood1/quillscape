@@ -1,7 +1,7 @@
 
 
-import BlogCard from "@/Components/Blogcard/BlogCard";
-import BlogHero from "@/Components/Hero/Hero";
+import BlogCard from "@/Component/Blogcard/BlogCard";
+import BlogHero from "@/Component/Hero/Hero";
 
 
 
