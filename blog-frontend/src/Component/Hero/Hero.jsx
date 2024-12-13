@@ -19,40 +19,37 @@ export default function BlogHero() {
       </div>
 
       {/* Featured Post */}
-      <div className="group relative">
-        <div className="aspect-[2/1] w-full overflow-hidden rounded-lg">
-          <Image
-            src="/hero2.jpg"
-            alt="Featured blog post hero image"
-            width={1200}
-            height={600}
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-            priority
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent rounded-lg" />
-        <div className="absolute bottom-0 p-6 md:p-8 text-white">
-          <div className="space-y-2 mb-4">
-            <div className="flex items-center gap-2 text-sm text-gray-200">
+      <div className="relative h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden rounded-xl">
+        <Image
+          src="/hero2.jpg"
+          alt="Featured Post"
+          layout="fill"
+          objectFit="cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+        <div className="absolute bottom-0 p-4 md:p-6 lg:p-8 text-white z-10">
+          <div className="space-y-1 md:space-y-2 mb-2 md:mb-4">
+            <div className="flex items-center gap-2 text-xs md:text-sm text-gray-200">
               <span>Anas Mehmood</span>
               <span>•</span>
               <span>12 Dec 2024</span>
             </div>
-            <h2 className="text-2xl md:text-3xl font-semibold">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold">
               <Link href="/blog" className="hover:underline">UX review presentations</Link>
             </h2>
-            <p className="text-lg text-gray-200">
+            <p className="text-sm md:text-lg text-gray-200 line-clamp-2 md:line-clamp-none">
               How do you create compelling presentations that wow your colleagues and impress your managers?
             </p>
           </div>
-          <div className="flex gap-2">
-            <Badge variant="secondary" className="bg-white/20 hover:bg-white/30 text-white px-[10px] py-[2px] border-2 border-white rounded-[67px]">
+          <div className="flex flex-wrap gap-2">
+            <Badge variant="secondary" className="text-xs md:text-sm bg-white/20 hover:bg-white/30 text-white px-2 md:px-[10px] py-[2px] border-2 border-white rounded-[67px]">
               Design
             </Badge>
-            <Badge variant="secondary" className="bg-white/20 hover:bg-white/30 text-white px-[10px] py-[2px] border-2 border-white rounded-[67px]">
+            <Badge variant="secondary" className="text-xs md:text-sm bg-white/20 hover:bg-white/30 text-white px-2 md:px-[10px] py-[2px] border-2 border-white rounded-[67px]">
               Research
             </Badge>
-            <Badge variant="secondary" className="bg-white/20 hover:bg-white/30 text-white px-[10px] py-[2px] border-2 border-white rounded-[67px]">
+            <Badge variant="secondary" className="text-xs md:text-sm bg-white/20 hover:bg-white/30 text-white px-2 md:px-[10px] py-[2px] border-2 border-white rounded-[67px]">
               Presentation
             </Badge>
           </div>
