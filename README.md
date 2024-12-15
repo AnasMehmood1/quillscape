@@ -41,5 +41,5 @@ Follow the steps below to run this project locally.
 
 1. **Clone the Repository**  
    ```bash
-   git clone https://github.com/AnasMehmood1/Sanity-blog.git
+   git clone https://github.com/AnasMehmood1/quillscape.git
    
