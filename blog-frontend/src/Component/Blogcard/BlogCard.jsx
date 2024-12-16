@@ -28,7 +28,7 @@ const BlogCard = () => {
     const data = await client.fetch(query);
     setBlogs(data);
   };
-
+// using use effect hook
   useEffect(() => {
     fetchBlogData();
   }, []);
